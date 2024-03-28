@@ -1,6 +1,6 @@
 # pizza-shop
 
-Pizza Restaurant Application
+Pizza Shop Application
 
 This repository contains the source code for a pizza restaurant simulation application built using React, TypeScript, Redux, HTML, and CSS. The application simulates the behavior of a pizza restaurant, from taking orders to preparing and delivering pizzas.
 
