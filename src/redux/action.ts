@@ -1,12 +1,6 @@
 let orderIdCounter = 0;
 
-interface IOrders {
-  orderId: number;
-  stage: string;
-  time: string;
-}
-
-export const placeOrder = (order: IOrders) => {
+export const placeOrder = (order: any) => {
   const orderId = `00${++orderIdCounter}`;
   return {
     type: "PLACE_ORDER",

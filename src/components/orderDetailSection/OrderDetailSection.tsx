@@ -16,12 +16,12 @@ const OrderDetailSection = (): JSX.Element => {
 
   // Calculate total pizzas delivered today
   const totalPizzasDeliveredToday = orders.filter(
-    (order: any) => order?.stage === ORDER_STAGES.order_picked
+    (order: any) => order?.stage === ORDER_STAGES.order_picked,
   ).length;
 
   // Check if order exists
   const hasOrderExists = orders.filter(
-    (order: any) => order?.orderId === orders[orders.length - 1]?.orderId
+    (order: any) => order?.orderId === orders[orders.length - 1]?.orderId,
   ).length;
 
   /**
@@ -53,7 +53,7 @@ const OrderDetailSection = (): JSX.Element => {
           <tr>{hasOrderExists > 0 && renderTableHeaderCells()}</tr>
         </thead>
         <tbody>
-          {orders.map((order: IOrder) => (
+          {orders.map((order: any) => (
             <tr key={order.orderId}>
               <td style={styles.table}>{order.orderId}</td>
               <td style={styles.table}>{order.stage}</td>

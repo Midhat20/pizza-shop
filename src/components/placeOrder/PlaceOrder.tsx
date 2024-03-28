@@ -80,7 +80,7 @@ const PlaceOrder = (): JSX.Element => {
     <div style={styles.menuWrapper}>
       <h2 style={styles.contentWrapper}>Pizza Menu</h2>
       <form style={styles.formWrapper}>
-        {["type", "size", "base"].map((fieldName) => (
+        {(["type", "size", "base"] as const).map((fieldName) => (
           <label key={fieldName} style={styles.label}>
             Pizza {fieldName.charAt(0).toUpperCase() + fieldName.slice(1)}:
             <select
